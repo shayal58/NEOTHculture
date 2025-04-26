@@ -1,3 +1,4 @@
+/* ===================== FONTS ===================== */
 @font-face {
   font-family: saveurSans;
   src: url(fonts/Saveur_sans.otf);
@@ -13,25 +14,22 @@
   src: url(fonts/Jost_light.ttf);
 }
 
-
+/* ===================== BASE ===================== */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
-.hr {
-  border: none;
-  border-top: 0.5px solid rgba(128, 128, 128, 0.421);
-  margin: 35px 0 35px;
-}
+/* ===================== NAVBAR ===================== */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   height: 90px;
   background: white;
-  padding: 0px 50px;
+  padding: 0 20px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -48,9 +46,12 @@ body {
 }
 
 .navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
 .navbar ul li {
@@ -61,7 +62,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: black;
   padding: 0 12px;
-  font-size: 0.8em;
+  font-size: 1rem;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -84,23 +85,7 @@ body {
   color: black;
 }
 
-.navbar i.fa-bars,
-.navbar i.fa-magnifying-glass {
-  color: white;
-  font-size: inherit;
-  transition: color 0.3s;
-}
-
-.navbar:hover i.fa-bars,
-.navbar:hover i.fa-magnifying-glass,
-.navbar.scrolled i.fa-bars,
-.navbar.scrolled i.fa-magnifying-glass {
-  color: black;
-}
-
-
-
-
+/* ===================== HERO SECTIONS ===================== */
 section {
   margin: 0;
   color: white;
@@ -115,637 +100,177 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 125vh;
+  min-height: 100vh;
   overflow: hidden;
 }
-
 
 .video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  max-height: 100%;
   filter: brightness(85%);
 }
 
-.videobg h2 {
-  position: absolute;
-  top: 81.2%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  color: white;
-  font-size: 30px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-}
-
-
-.videobg button {
-  position: absolute;
-  top: 91%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  color: white;
-
-  padding: 15px 40px;
-  font-size: 15px;
-  font-weight: 100;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(45px);
-  border: 1px solid white;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.videobg button:hover {
-  /* border: 2px solid whitesmoke; */
-  box-shadow: inset 0 0 0 1px white;
-}
-
-.imagebg {
-  height: 110vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  /* background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url('assets/Hero\ Pages/i1.jpg'); */
-  /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)), linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('assets/Hero\ Pages/i1.jpg'); */
-
-  /* background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url('assets/Hero\ Pages/i1.jpg'); */
-
-  background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.85)), url('assets/Hero\ Pages/i1.jpg');
-
-  background-size: cover;
-  background-position: center;
-}
-.imagebg:hover{
-  opacity: 1; /* Fade in on hover */
-  transition: opacity 0.5s ease;
-}
-
+.videobg h2,
 .imagebg h2 {
   position: absolute;
-  top: 77.2%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
-  color: white;
-  font-size: 30px;
-  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 10px;
 }
 
+.videobg button,
 .imagebg button {
   position: absolute;
-  top: 89%;
+  top: 88%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
-  color: white;
   padding: 15px 40px;
-  font-size: 15px;
+  font-size: 1rem;
+  font-weight: 400;
   background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(45px);
+  backdrop-filter: blur(30px);
   border: 1px solid white;
   border-radius: 30px;
   cursor: pointer;
   transition: 0.2s;
 }
 
+.videobg button:hover,
 .imagebg button:hover {
   box-shadow: inset 0 0 0 1px white;
 }
 
-.services h2{
-  font-family: 'Poppins';
-  font-weight: 500;
-  color: black;
-  font-size:large;
-  margin-top: 80px;
-  margin-bottom: 40px;
+.imagebg {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* ===================== SOCIAL LINKS ===================== */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 4.5rem;
-  align-items: start;
-  margin-bottom: 85px;
+  margin-top: 30px;
 }
 
-.grid-item {
-  background-color: white;
-  overflow: hidden;
-  cursor: pointer;
+.social-links a img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s;
 }
 
-.card-image {
-  display: block;
-  width: 100%;
-  height: 16rem;
-  object-fit: cover;
+.social-links a:hover img {
+  transform: scale(1.1);
 }
 
-.card-content {
-  text-align: left;
-}
-
-.card-content h1 {
-  font-family: jost;
-  color: black;
-  font-size: 1.3rem;
-  font-weight: 100;
-  margin-bottom: 0.5rem;
-}
-
-.card-content p {
-  font-family: jost_light;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  margin-right: 1.7rem;
-  font-weight: 500;
-  color: black;
-}
-
-.card-btn {
-  font-family: jost_light;
-  color: black;
-  border: none;
-  font-size: 0.9rem;
-  font-weight: 100;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.container {
-  display: flex;
-  /* align-items: flex-start; */
-}
-
-.column {
-  flex: 1;
-  /* padding: 30px; */
-  /* margin: 0 auto; */
-  padding: 0 4.5rem;
-  text-align: left;
-  
-}
-
-.cell {
-  font-family: jost_light;
-  color: black;
-  margin-bottom: 10px;
-  padding: 5px;
+/* ===================== FOOTER ===================== */
+footer {
   font-size: 14px;
-  /* font-weight: 500; */
-  
-}
-
-a.links{
-  color: inherit;
-  text-decoration: none;
-}
-
-span{
-  /* text-decoration-color: grey; */
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.cell-head{
-  font-size: 12px;
-  font-weight: 600;
-}
-
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* padding: 20px; */
-}
-
-.language {
-  font-family: jost_light;
-  font-size: 0.9rem;
-  color: inherit;
-  text-decoration: none;
-  padding: 0 4.5rem;
-}
-
-.footer ul {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  list-style-type: none;
-  /* margin-right: 10px; */
-  padding-right: 50px;
-}
-
-.footer ul li {
-  margin-left: 10px;
-  margin-right: 30px;
-}
-
-.footer ul li a {
-  font-family: jost_light;
-  font-size: 0.9rem;
-  color: inherit;
-  text-decoration: none;
-}
-
-.footer .language .globe-icon {
-  color: rgba(5, 4, 4, 0.775);
-}
-
-.footer span {
-  padding-left: 10px;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 6px;
-}
-
-.last-logo{
-  margin-top: 45px;
-  margin-bottom: 50px;
-  font-family: saveurSans ;
-  font-size: 1.3em;
+  padding: 20px;
   text-align: center;
+  color: #555;
+  background-color: #f9f9f9;
 }
 
-.accordian-container{
-  display: none;
-}
-.hr-hid{
-  display: none;
-}
-
-.mobile-footer{
-  display: none;
-}
-
-#image1 {
-    display: flex;
+/* ===================== RESPONSIVE ADJUSTMENTS ===================== */
+@media (max-width: 768px) {
+  .navbar {
     flex-direction: column;
-    align-items: flex-start; /* or center, depending on your layout preference */
-}
-
-#image1 h2 {
-    margin: 0; /* Remove default margin */
-    padding: 10px 0; /* Add padding to create space between elements */
-}
-
-
-
-#h2-1-imagebg {
-    margin-bottom: 10px; /* Adjust the value as needed */
-}
-
-#h2-2-imagebg {
-    margin-top: 0; /* Ensure no extra margin at the top */
-}
-
-
-/* =====================MEDIUM DEVICES===== */
-
-@media screen and (max-width: 1024px) {
-  .container{
-    margin-right: 4.5rem;
-  }
-  .column {
-    flex: 1;
-    flex: 50%;
-    padding: 0 0 0 4.5rem;
-    text-align: left;
-  }
-  
-
-  .cell {
-    font-family: jost_light;
-    color: black;
-    margin-bottom: 10px;
-    font-size: 12px;
+    height: auto;
+    padding: 10px;
   }
 
-}
-
-
-
-/* =====================SMALL DEVICES===== */
-
-@media screen and (max-width: 600px) {
-
-  body{
-    width: 100%;
-  }
-
-  .videobg{
-    height: 225vh;
-    width: 100%;
-  }
-
-  .imagebg{
-    height: 225vh;
-    width: 125vh;
-  }
-
-  .videobg h2 {
-    top: 79%;
-    font-size: 3rem;
-    font-weight: 550;
-    white-space: nowrap;
-  }
- 
-  
-  .videobg button {
-    font-family: jost_light;
-    top: 91%;
-    left: 50%;
-    padding: 38px 145px;
-    font-size: 2rem;
-    font-weight: 100;
-    white-space: nowrap;
-    backdrop-filter: blur(100px);
-    border-radius: 100px;
-    border: 2px solid white;
-  }
-
-  #h2-1-imagebg{
-    font-family: jost_light;
-    top: 72%;
-    font-size: 3.5rem;
-    white-space: nowrap;
-  }
-  #h2-2-imagebg{
-    font-family: jost_light;
-    top: 77%;
-    font-size: 3.5rem;
-    white-space: nowrap;
-  }
-  
-  .imagebg button {
-    font-family: jost_light;
-    top: 89%;
-    padding: 38px 145px;
-
-    font-size: 2rem;
-    font-weight: 100;
-    white-space: nowrap;
-
-    backdrop-filter: blur(100px);
-    border-radius: 100px;
-    border: 2px solid white;
-  }
-
-  .services{
-    width: 125vh;
-  }
-  .grid{
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  }
-
-  .card-image {
-    height: 50rem;
-  }
-
-  .card-content h1 {
-    margin-top: 3.5rem;
-    font-size: 3rem;
-  }
-
-  .card-content p {
-    font-size: 2rem;
-  }
-  .card-btn {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    font-size: 2rem;
-  }
-
-
-  .column {
-    flex-direction: row;
-    padding: 0 1rem;
-  }
-
-  .links{
-    display: none;
-  }
-  .footer{
-    display: none;
-  }
-
-  .last-logo{
-    width: 125vh;
-  }
-
-  .hr{
-    width: 125vh;
-  }
-
-  .hr-hid{
-    display: block;
-    margin-left: 4.5rem;
-    width: 104vh;
-  }
-
-  .last-logo{
-    font-size: 3rem;
-  }
-
-  .accordian-container{
-    display: contents;
-  }
-
-  .accordion {
-    font-family: jost_light;
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    padding: 30px;
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
-    width: 125vh;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size:  2.4rem;
-    transition: 0.4s;
-  }
-  
-  .active, .accordion:hover {
-    background-color: white;
-  }
-  
-  .accordion:after {
-    content: '\002B';
-    color: black;
-    font-weight: 500;
-    /* font-weight: bold; */
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2212";
-    transform: rotate(90deg);
-  }
-  
-  .panel {
-    display: block;
-    margin-left: 4.5rem;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    /* white-space:break-spaces; */
-    
-  }
-
-  .panel a{
-    font-family: jost_light;
-    display: block;
-    margin: 50px 20px 50px 20px;
-    text-decoration: none;
-    color: black;
-    font-weight: 400;
-    font-size: 2.3rem;
-
-  }
-  .panel a span {
-    text-underline-offset: 12px;
-  }
-
-  .social{
-    align-items: center;
-    margin: 30px;
-    margin-right: 40px;
-    font-size: 60px;
-    color: black;
-  }
-  .insta{
-    margin-left: 100px;
-  }
-  .pin{
-    margin-left: 300px;
-  }
-  .socialmedia{
-    margin-top: 100px;
-  }
-
-
-  
-  .mobile-footer {
-    margin-top: 100px;
-    display: flex;
+  .navbar ul {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 100px;
-  }
-  
-  .mobile-footer ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin-bottom: 10px;
-    /* gap: 40px; */
-  }
-  
-  .mobile-footer ul li {
-    margin: 0 10px;
-  }
-  
-  .mobile-language {
-    font-family: jost_light;
-    color: black;
-    font-size: 2.5rem;
     margin-top: 10px;
   }
 
-  footer ul li a {
-    color: black;
-    font-family: jost_light;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 2.5rem;
-  }
-  
-  .mobile-footer .mobile-language .globe-icon {
-    color: rgba(5, 4, 4, 0.775);
-  }
-
-  footer a{
-    margin-top: 40px;
-    text-decoration: none;
-  }
-  
-  .mobile-footer span {
-    margin-top: 70px;
-    padding-left: 10px;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 20px;
-  }
-
-  .contain{
-    margin-top: 65px;
-  }
-
-
-  .nav-hid{
+  .navbar .neoth {
     display: none;
   }
+}
 
-  .navbar {
-    height: 150px;
+@media (max-width: 600px) {
+  .videobg h2,
+  .imagebg h2 {
+    font-size: 1.8rem;
   }
 
-  .navbar .brand {
-    font-family: 'Dune', sans-serif;
+  .videobg button,
+  .imagebg button {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .social-links a img {
+    width: 30px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+}
+/* Landscape mode adjustment */
+@media (max-width: 900px) and (orientation: landscape) {
+  .videobg button,
+  .imagebg button {
+    top: 75%; /* Move the button higher in landscape */
+    padding: 10px 30px;
+    font-size: 0.9rem;
+  }
+
+  .videobg h2,
+  .imagebg h2 {
+    top: 60%; /* Move the title a bit higher too */
     font-size: 2rem;
-    letter-spacing: 2px;
-
-  }
-
-  .navbar ul li i {
-    margin-left: 40px;
-  }
-
-  .navbar ul li a {
-    font-size: 1.4rem;
-  }
-
-  #menu_icon{
-    font-size: 2.5rem;
-    margin-left: 5px;
-  }
-
-  #search_icon{
-    margin-left: 60px;
-    font-size: 2.5rem;
   }
 }
- 
-.culture{
-  font-family: saveurSans;
-  src: url(fonts/Saveur_sans.otf);
+
+.social-links a img {
+  filter: none; /* normal color */
 }
-.joinus {
-  font-size: 14px; /* this would override Tailwind's size */
-  color:white;
-}
-@media screen and (max-width: 768px) {
-  .neoth {
+
+@media (max-width: 600px) {
+  .videobg h2,
+  .imagebg h2 {
+    font-size: 1.8rem;
+  }
+
+  .videobg button,
+  .imagebg button {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+
+  body {
+    background-color: black;
+  }
+
+  .social-links a img {
+    filter: brightness(0) saturate(100%) invert(1);
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+  }
+
+  /* ✅ ADD THIS HERE */
+  .joinus-top {
     display: none;
   }
 }
+
