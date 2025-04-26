@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col">
+    <nav id="navbar" class="navbar " >
+        <!-- <ul>
+            <li><i class="fa-solid fa-bars" id="menu_icon"></i></li>
+            <li><a href="#" class="nav-hid">Menu</a></li>
+            <li><i class="fa-solid fa-magnifying-glass" id="search_icon"></i></li>
+            <li><a href="#" class="nav-hid">Search</a></li>
+        </ul> -->
+        <a href="index.html" class="brand text-blue-400"><img src="assets/Hero Pages/logo.png" width="50"></a>
+
+        <a href="index.html" class="neoth text-blue-400"><img src='assets/neoth.svg' width="400" class="neoth"></a>
+        <ul>
+            <li><a href="joinus.html" class="joinus text-2xl " >JOIN US</a></li>
+           
+        </ul>
+    </nav>
+    <div class="container mtt-8 ">
+        <div class="form-container">
+          
+          <h3 class="description">
+            Drop your thoughts, ideas, and support for growing our culture.<br>
+            Your voice matters to us.
+          </h3>
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="f5e0cfd7-7688-4e8d-b64d-14e5ec528f6d">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <footer style="text-align: center; padding: 20px; font-size: 14px; color:white;">
+        &copy; 2025 NEOTH All rights reserved.
+    </footer>
+   
+</body>
+</html>
