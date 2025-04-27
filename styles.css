@@ -93,14 +93,18 @@
     justify-content: space-between;
 
     justify-content: center;
-
+margin-top: 32px;
     
   }
   @media (max-width: 768px) {
     .neoth {
       display: none;
     }
+    .description{
+      font-size: 12px;
+    }
   }
+  
   
 
   @media (min-width: 768px) {
@@ -109,6 +113,7 @@
       flex-direction: row;
       align-items: flex-start;
     }
+    
   }
 
   .form-container {
@@ -182,9 +187,14 @@
     color: #ccc;
   }
   .description {
-    padding-bottom: 32px;
-    font-size: 32px;
+    padding-bottom: 64px;
+    font-size: 21px;
     display: flex;
-   text-align: center;
+    text-align: center;
+
     
   }
+.text-xl{
+  font-size: 14px;
+}
+  
